@@ -103,7 +103,7 @@ class Mailer implements MailerContract, MailQueueContract
      * @param  Dispatcher|null  $events
      * @return void
      */
-    public function __construct(string $name, Factory $views, Swift_Mailer $swift, Dispatcher $events = null)
+    public function __construct(string $name, Factory $views, Swift_Mailer $swift, Dispatcher|null $events = null)
     {
         $this->name = $name;
         $this->views = $views;
